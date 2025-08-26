@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*
 Fondo: #1D1D1D
 Titulos: #B88A4C
@@ -12,7 +13,7 @@ body {
 }
 
 nav {
-    background-color: #CD7F32;
+    background-color: #232221;
     display: flex;
     justify-content: flex-end; 
     color: #fff;
@@ -33,19 +34,25 @@ li {
 
 a {
     text-decoration: none; /* Quitar subrayado */
-    color: inherit;        /* Para que el color sea el del contenedor, opcional */
+    color: inherit; 
+    color: #ffff;       /* Para que el color sea el del contenedor, opcional */
 }
 header {
-    padding: 20%; /* Cambié de 20% a 20px para no exagerar el padding */
+    padding: 15%; /* Cambié de 20% a 20px para no exagerar el padding */
     display: flex;
     flex-direction: column;  /* Apilar verticalmente */
-    align-items: center;     /* Centrar horizontalmente */
+    align-items: center;   /* Centrar horizontalmente */
 }
-
+header h2{
+    color: #fff;
+    font-weight: lighter;
+}
 h1 {
-    color: #CD7F32;
+    color: #cd803287;
     font-family: "Montserrat", sans-serif;
-    margin: 0 0 15px 0;  /* Margen inferior para separar del botón */
+    margin: 0 0 15px 0; 
+    font-size: 15vh; /* Margen inferior para separar del botón */
+    font-weight: lighter;
 }
 
 .botonhd {
@@ -65,10 +72,9 @@ h1 {
 }
 
 
-a:hover{
-    background-color: #fff;
-    color: #B88A4C;
-    border-radius: 10px;
+.nava:hover{
+    color: #826137;
+    text-decoration-line:inherit;
 }
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
@@ -111,9 +117,9 @@ a:hover{
 
 /* --- Sección de Productos --- */
 .product-section {
-    padding: 10%;
+    padding: 10px 50px 50px 50px;
     text-align: center;
-    
+    background-color: #2d2d2d;
 }
 
 .product-section h2 {
@@ -130,7 +136,7 @@ a:hover{
 
 .product-card {
     background-color: var(--dark-gray);
-    border: 1px solid #2a2a2a;
+    border: 3px solid #2a2a2a;
     border-radius: 10px;
     overflow: hidden;
     text-align: left;
@@ -176,7 +182,7 @@ a:hover{
 footer {
 
     padding: 40px 0 20px;
-    border-top: 2px solid var(--gold);
+    
 }
 
 .footer-content {
@@ -188,6 +194,11 @@ footer {
     text-align: center;
 }
 
+.fc:hover{
+
+    background-color: #CD7F32;
+    color: #fff;
+}
 .footer-column {
     flex: 1;
     min-width: 200px;
@@ -200,16 +211,16 @@ footer {
 
 .footer-column ul {
     list-style: none;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-column ul li a {
     margin-bottom: 8px;
-    display: inline-block;
-}
-
-.social-icons a {
-    font-size: 1.5rem;
-    margin: 0 10px;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 .footer-bottom {
@@ -219,4 +230,59 @@ footer {
     border-top: 1px solid #333;
     color: #CD7F32;
     font-size: 0.9rem;
+}
+
+/* Fondo estático con estrellas */
+#star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1D1D1D;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(0.5px);
+}
+
+/* Huellas animadas como antes */
+#paw-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.paw-circle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: fallPaw linear;
+}
+
+@keyframes fallPaw {
+    0% {
+        transform: translateY(0) scale(0.1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) scale(0.5);
+        opacity: 0;
+    }
 }

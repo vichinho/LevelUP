@@ -10,15 +10,17 @@
 <body>
     <nav>
         <ul>
-            <a href=""><img src="" alt=""></a>
-            <a href="#"><li>Inicio</li></a>
-            <a href="index2.html"><li>Nosotros</li></a>
-            <a href="#"><li>Contacto</li></a>
+            <a class="nava" href=""><img src="" alt=""></a>
+            <a class="nava" href="#"><li>Inicio</li></a>
+            <a class="nava" href="index2.html"><li>Nosotros</li></a>
+            <a class="nava" href="login.html"><li>Login</li></a>
         </ul>
     </nav>
+    <div id="star-background"></div>
+    <div id="paw-animation"></div>    
     <header>
         <h1>LEVEL UP</h1>
-        <button class="botonhd">Ver Productos</button>
+        <h2>Desafía tus limites</h2>
     </header>
     <section id="productos" class="product-section container">
         <h2>Productos Destacados</h2>
@@ -62,16 +64,51 @@
             <div class="footer-column">
                 <h4>Sobre Nosotros</h4>
                 <ul>
-                    <li><a href="#">Nuestra Historia</a></li>
-                    <li><a href="#">Impacto Comunitario</a></li>
-                    <li><a href="#">Términos y Condiciones</a></li>
+                    <li><a class="fc" href="#">Nuestra Historia</a></li>
+                    <li><a class="fc" href="#">Impacto Comunitario</a></li>
+                    <li><a class="fc" href="#">Términos y Condiciones</a></li>
                 </ul>
-            </div>
-            
+            </div>     
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script>
+    // Crear estrellas estáticas
+    const starContainer = document.getElementById('star-background');
+    const starCount = 150; // Número de estrellas
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.top = Math.random() * 100 + 'vh';
+        star.style.left = Math.random() * 100 + 'vw';
+        star.style.width = star.style.height = (Math.random() * 2 + 1) + 'px';
+        star.style.opacity = Math.random() * 0.8 + 0.2;
+        starContainer.appendChild(star);
+    }
+
+    // Crear huellas animadas
+    const pawContainer = document.getElementById('paw-animation');
+
+    function createPawCircle() {
+        const circle = document.createElement('div');
+        circle.classList.add('paw-circle');
+        circle.style.left = Math.random() * 100 + 'vw';
+        circle.style.animationDuration = (2 + Math.random() * 3) + 's';
+        circle.style.width = circle.style.height = (5 + Math.random() * 10) + 'px';
+
+        pawContainer.appendChild(circle);
+
+        setTimeout(() => {
+            circle.remove();
+        }, 5000);
+    }
+
+    setInterval(createPawCircle, 200);
+</script>
+
+
 </body>
 </html>
