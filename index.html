@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LEVEL UP</title>
     <link rel="stylesheet" href="static/styles.css">
     
 </head>
 <body>
     <nav>
         <ul>
-            <a class="nava" href=""><img src="" alt=""></a>
             <a class="nava" href="#"><li>Inicio</li></a>
-            <a class="nava" href="index2.html"><li>Nosotros</li></a>
+            <a class="nava" href="index2.html"><li>Catálogo</li></a>
+            <a class="nava" href="login.html"><li>Blog</li></a>
             <a class="nava" href="login.html"><li>Login</li></a>
         </ul>
     </nav>
@@ -22,6 +22,16 @@
         <h1>LEVEL UP</h1>
         <h2>Desafía tus limites</h2>
     </header>
+    <section id="informacion" class="informacion-mision-vision">
+        <div class="mision">
+            <h4>Misión</h4>
+            <p>Proporcionar productos de alta calidad para gamers en todo Chile, ofreciendo una experiencia de compra única y personalizada, con un enfoque en la satisfacción del cliente y el crecimiento de la comunidad gamer.</p>
+        </div>
+        <div class="vision">
+            <h4>Visión</h4>
+            <p>Ser la tienda online líder en productos para gamers en Chile, reconocida por su innovación, servicio al cliente excepcional, y un programa de fidelización basado en gamificación que recompense a nuestros clientes más fieles.</p>
+        </div>
+    </section>
     <section id="productos" class="product-section container">
         <h2>Productos Destacados</h2>
         <div class="product-grid">
@@ -64,50 +74,18 @@
             <div class="footer-column">
                 <h4>Sobre Nosotros</h4>
                 <ul>
-                    <li><a class="fc" href="#">Nuestra Historia</a></li>
-                    <li><a class="fc" href="#">Impacto Comunitario</a></li>
+                    <li><a class="fc" href="#">Contacto</a></li>
+                    <li><a class="fc" href="#">Redes Sociales</a></li>
                     <li><a class="fc" href="#">Términos y Condiciones</a></li>
                 </ul>
-            </div>     
+            </div>  
+               
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script>
-    // Crear estrellas estáticas
-    const starContainer = document.getElementById('star-background');
-    const starCount = 150; // Número de estrellas
-
-    for (let i = 0; i < starCount; i++) {
-        const star = document.createElement('div');
-        star.classList.add('star');
-        star.style.top = Math.random() * 100 + 'vh';
-        star.style.left = Math.random() * 100 + 'vw';
-        star.style.width = star.style.height = (Math.random() * 2 + 1) + 'px';
-        star.style.opacity = Math.random() * 0.8 + 0.2;
-        starContainer.appendChild(star);
-    }
-
-    // Crear huellas animadas
-    const pawContainer = document.getElementById('paw-animation');
-
-    function createPawCircle() {
-        const circle = document.createElement('div');
-        circle.classList.add('paw-circle');
-        circle.style.left = Math.random() * 100 + 'vw';
-        circle.style.animationDuration = (2 + Math.random() * 3) + 's';
-        circle.style.width = circle.style.height = (5 + Math.random() * 10) + 'px';
-
-        pawContainer.appendChild(circle);
-
-        setTimeout(() => {
-            circle.remove();
-        }, 5000);
-    }
-
-    setInterval(createPawCircle, 200);
-</script>
+    <script src="static/script.js"> </script>
 
 
 </body>
