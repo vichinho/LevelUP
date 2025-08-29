@@ -118,7 +118,7 @@ h1 {
 .product-section {
   padding: 10px 50px 50px 50px;
   text-align: center;
-  background-color: #2d2d2d;
+  background-color: #232221;
 }
 
 .product-section h2 {
@@ -223,7 +223,7 @@ footer {
 
 .footer-bottom {
   text-align: center;
-  color: #cd7f32;
+  color: #cd803279;
   font-size: 0.9rem;
 }
 
@@ -283,18 +283,36 @@ footer {
 }
 
 .informacion-mision-vision {
-  padding: 2px;
-  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* hace que ambos divs tengan la misma altura */
+  gap: 10px; /* espacio entre misión y visión */
+  margin-bottom: 50px;
+  margin-left: 50px;
 }
-.mision h4 {
-  color: #ffffffa8;
+.informacion-mision-vision {
+  display: flex;
+  justify-content: flex-start; /* alineados a la izquierda */
+  align-items: stretch;
+  gap: 20px; /* espacio entre misión y visión */
 }
-.mision p {
-  color: #ffffff62;
+.mision h4,
+.vision h4,
+.nosotros h4 {
+  color: #fff;
+  font-weight: lighter;
 }
-.vision h4 {
-  color: #ffffffa8;
+.mision,
+.vision,
+.nosotros {
+  width: 500px; /* aquí controlas el ancho */
+  padding: 20px;
+  color: #ffffff5e;
 }
-.vision p {
-  color: #ffffff62;
+
+.divider {
+  width: 1px;
+  background-color: #4e4e4e;
+  height: 80px; /* aquí decides la altura */
+  margin: auto 20px; /* centrado vertical y con espacio */
 }
