@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+    margin: 0; /* quitar márgenes por defecto */
+    height: 100vh; /* altura completa de la ventana */
+    display: flex;
+    justify-content: center; /* centra horizontalmente */
+    align-items: center; /* centra verticalmente */
+    background-color: #222; /* fondo oscuro para que se note */
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Tu formulario centrado */
+  .formlogin {
+    background-color: #14141421; /* con transparencia */
+    border-radius: 10px;
+    padding: 50px;
+    width: 400px; /* ancho fijo para estructura */
+    box-sizing: border-box; /* para que padding no agrande el ancho */
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    color: white;
+    text-align: center;
+  }
+  .formlogin h1{
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+  }
+  
+  .formlogin h2{
+    color: #ffffffc2;
+    text-align: center;
+    font-size: 15px;
+  }
+  
+  .formlogin input {
+    margin: 10px auto; /* margen arriba/abajo 10px, auto izquierda/derecha para centrar */
+    display: block;    /* para que funcione el margin auto en horizontal */
+    padding: 10px;
+    border-radius: 5%;
+    border-style: none;
+    float: none;
+  }
+  
+  
+  .botones {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .btentrar,
+  .btregistrar {
+    display: inline-block; /* para que respete el text-align */
+    color: #000000;
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+    margin: 0 5px; /* espacio entre botones */
+  }
+  .btentrar{
+    background-color: #328022;
+    color:#fff;
+  }
+  .btregistrar{
+    background-color: #966203;
+    color:#fff;
+  }
+
+  .btentrar:hover{
+    background-color: #fff;
+    color: #328022;
+  }
+  .btregistrar:hover{
+    background-color: #fff;
+    color: #966203;
+  }
+  
+  /* Fondo estático con estrellas */
+#star-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #1d1d1d;
+    z-index: -2;
+    overflow: hidden;
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    filter: blur(0.5px);
+  }
+  
+  /* Huellas animadas como antes */
+  #paw-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .paw-circle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0.9;
+    animation: fallPaw linear;
+  }
+  
+  @keyframes fallPaw {
+    0% {
+      transform: translateY(0) scale(0.1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) scale(0.5);
+      opacity: 0;
+    }
+  }

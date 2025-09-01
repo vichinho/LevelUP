@@ -1,19 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="static/styles.css" />
-  </head>
-  <body>
-    <nav>
-      <ul>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Level-Up Gamer - Catálogo</title>
+  <link rel="stylesheet" href="static/catalogo.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <ul>
         <a class="nava" href="index.html"><li>Inicio</li></a>
         <a class="nava" href="catalogo.html"><li>Catálogo</li></a>
         <a class="nava" href="blog.html"><li>Blog</li></a>
         <a class="nava" href="login.html"><li>Login</li></a>
-      </ul>
-    </nav>
-  </body>
+    </ul>
+</nav>
+  <section id="productos" class="product-section container">
+    <h2>Productos Destacados</h2>
+    <div class="product-grid">
+      <!-- Consola -->
+      <div class="product-card">
+        <img src="img/ps5.webp" alt="Consola PlayStation 5">
+        <div class="product-info">
+          <h3>PlayStation 5</h3>
+          <p>Consola de última generación con gráficos impresionantes y tiempos de carga ultrarrápidos.</p>
+          <div class="product-price">$549.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+      <!-- Silla -->
+      <div class="product-card">
+        <img src="img/silla.jpg" alt="Silla Gamer Secretlab Titan">
+        <div class="product-info">
+          <h3>Silla Gamer Secretlab Titan</h3>
+          <p>Diseñada para el máximo confort, con soporte ergonómico y personalización ajustable.</p>
+          <div class="product-price">$349.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Auriculares -->
+      <div class="product-card">
+        <img src="img/hyperx.webp" alt="Auriculares Gamer HyperX Cloud II">
+        <div class="product-info">
+          <h3>Auriculares HyperX Cloud II</h3>
+          <p>Sonido envolvente de calidad con un micrófono desmontable y comodidad superior.</p>
+          <div class="product-price">$79.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Juego de Mesa Catan -->
+      <div class="product-card">
+        <img src="img/catan.jpg" alt="Juego de Mesa Catan">
+        <div class="product-info">
+          <h3>Juego de Mesa Catan</h3>
+          <p>Un clásico de estrategia. Compite por colonizar la isla de Catan. Ideal para 3-4 jugadores.</p>
+          <div class="product-price">$29.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Juego de Mesa Carcassonne -->
+      <div class="product-card">
+        <img src="img/carca.jpg" alt="Juego de Mesa Carcassonne">
+        <div class="product-info">
+          <h3>Juego de Mesa Carcassonne</h3>
+          <p>Juego de colocación de fichas para construir el paisaje medieval de Carcassonne.</p>
+          <div class="product-price">$24.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Controlador Xbox -->
+      <div class="product-card">
+        <img src="img/xbox-controller.jpg" alt="Controlador Inalámbrico Xbox Series X">
+        <div class="product-info">
+          <h3>Controlador Xbox Series X</h3>
+          <p>Comodidad con botones mapeables y respuesta táctil mejorada. Compatible con Xbox y PC.</p>
+          <div class="product-price">$59.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- PC Gamer -->
+      <div class="product-card">
+        <img src="img/pc-gamer.jpg" alt="PC Gamer ASUS ROG Strix">
+        <div class="product-info">
+          <h3>PC Gamer ASUS ROG Strix</h3>
+          <p>Potente equipo diseñado para gamers exigentes con componentes de última generación.</p>
+          <div class="product-price">$1.299.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Mouse -->
+      <div class="product-card">
+        <img src="img/mouse.jpg" alt="Mouse Gamer Logitech G502 HERO">
+        <div class="product-info">
+          <h3>Mouse Logitech G502 HERO</h3>
+          <p>Sensor de alta precisión y botones personalizables para un control óptimo.</p>
+          <div class="product-price">$49.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Mousepad -->
+      <div class="product-card">
+        <img src="img/mousepad.jpg" alt="Mousepad Razer Goliathus Extended Chroma">
+        <div class="product-info">
+          <h3>Mousepad Razer Goliathus Extended Chroma</h3>
+          <p>Superficie amplia con iluminación RGB personalizable para un mejor control.</p>
+          <div class="product-price">$29.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+
+      <!-- Polera -->
+      <div class="product-card">
+        <img src="img/polera.jpg" alt="Polera Gamer Personalizada Level-Up">
+        <div class="product-info">
+          <h3>Polera Gamer Personalizada 'Level-Up'</h3>
+          <p>Camiseta cómoda y estilizada, personalizable con tu gamer tag o diseño favorito.</p>
+          <div class="product-price">$14.990</div>
+          <button class="add-to-cart">🛒 Agregar al carrito</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div id="star-background"></div>
+    <script src="static/script.js"></script>
+</body>
 </html>
