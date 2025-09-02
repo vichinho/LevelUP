@@ -74,6 +74,52 @@ h1 {
   color: #826137;
   text-decoration-line: inherit;
 }
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Ajusta según tu diseño original */
+}
+
+nav ul li {
+  position: relative; /* Necesario para el posicionamiento del desplegable */
+}
+
+nav ul li a {
+  display: block;
+  padding: 10px 20px; /* Ajusta según tu estilo */
+  text-decoration: none;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #232221; /* Fondo oscuro para coincidir con el tema */
+  min-width: 500px; /* Ancho mínimo */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: #ffffff81; /* Color de texto para coincidir con el tema */
+}
+
+.dropdown-content li a:hover {
+  background-color: #2a2a2a; /* Fondo de hover más oscuro */
+  color: #826137; /* Color de hover para texto */
+}
+
+.dropdown:hover .dropdown-content {
+  display: grid; /* Usar grid para 2 columnas */
+  grid-template-columns: repeat(2, 1fr); /* 2 categorías por fila */
+}
+
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
