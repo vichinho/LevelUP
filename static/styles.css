@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Permanent+Marker&display=swap');
 /*
 Fondo: #1D1D1D
 Titulos: #B88A4C
@@ -13,45 +13,147 @@ body {
 }
 
 nav {
-  background-color: #232221;
+  background-color: #1f1f1e;
   display: flex;
   justify-content: center;
   font-family: "Montserrat", sans-serif;
   font-size: 100%;
-}
-
-ul {
-  list-style: none;
-  display: flex;
   padding: 10px;
-  margin: 0; /* Para eliminar márgenes que puedan afectar */
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-li {
-  padding: 10px;
+
+nav ul li a {
+  color: #ffffff; /* Usa el color del elemento padre (normalmente negro o definido por ti) */
+  text-decoration: none; /* Elimina el subrayado */
+  font-size: 15px;
 }
 
+nav ul li a:hover{
+  color: #000;
+  background-color: #fff;
+}
+
+.header-container {
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #000;
+  }
+
+  /* Sección superior con cuenta y carrito */
+  .barra-principal {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 25px;
+    font-size: 15px;
+    padding: 20px;
+    color: #000;
+  }
+
+  .barra-principal a {
+    text-decoration: none;
+    color: #000;
+  }
+
+  .barra-principal a:hover {
+    color: #007bff;
+  }
+
+  .barra-principal i {
+    margin-right: 5px;
+    color: #000;
+  }
+
+  /* Sección inferior con nombre y buscador */
+  .nombre-buscador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: #000;
+  }
+
+  .nombre-buscador .nombre {
+    font-size: 50px;
+    font-weight: bold;
+    color: #000000;
+    font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  }
+
+  .buscador input[type="text"] {
+    width: 200px;
+    padding: 6px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
 .nava {
   text-decoration: none; /* Quitar subrayado */
   color: inherit;
   color: #ffffff81; /* Para que el color sea el del contenedor, opcional */
 }
 header {
-  padding: 15%; /* Cambié de 20% a 20px para no exagerar el padding */
+  position: relative;
+  width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.carrusel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slides {
   display: flex;
-  flex-direction: column; /* Apilar verticalmente */
-  align-items: center; /* Centrar horizontalmente */
+  width: 300%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
-header h2 {
-  color: #fff;
-  font-weight: lighter;
+
+.slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
-h1 {
-  color: #cd803287;
-  font-family: "Montserrat", sans-serif;
-  margin: 0 0 15px 0;
-  font-size: 15vh; /* Margen inferior para separar del botón */
-  font-weight: lighter;
+
+button.prev,
+button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.nombre{
+  padding: 50px;
 }
 
 .botonhd {

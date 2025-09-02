@@ -5,15 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LEVEL UP</title>
     <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
 </head>
 <body>
+    <div class="header-container">
+
+  <!-- Parte superior -->
+  <div class="barra-principal">
+    <a href="#"><i class="fas fa-user"></i> Mi cuenta</a>
+    <a href="#">Iniciar sesión</a>
+    <a href="#"><i class="fas fa-shopping-cart"></i> Usted tiene <strong>3</strong> productos en el carrito</a>
+  </div>
+
+  <!-- Parte inferior con nombre + buscador -->
+  <div class="nombre-buscador">
+    <div class="nombre">LEVELUP 升級</div>
+    <div class="buscador">
+      <input type="text" placeholder="Buscar...">
+    </div>
+  </div>
+
+</div>
     <nav>
       <ul>
-        <li><a class="nava" href="index.html">Inicio</a></li>
-        <li class="dropdown">
-          <a class="nava" href="catalogo.html">Catálogo</a>
-          <ul class="dropdown-content">
             <li><a href="#">Juegos de Mesa</a></li>
             <li><a href="#">Accesorios</a></li>
             <li><a href="#">Consolas</a></li>
@@ -25,16 +40,23 @@
             <li><a href="#">Polerones Gamers Personalizados</a></li>
           </ul>
         </li>
-        <li><a class="nava" href="blog.html">Blog</a></li>
-        <li><a class="nava" href="login.html">Login</a></li>
       </ul>
     </nav>
     <div id="star-background"></div>
     <div id="paw-animation"></div>    
     <header>
-        <h1>LEVEL UP</h1>
-        <h2>Desafía tus limites </h2>
-    </header>
+  <div class="carrusel">
+    <div class="slides">
+      <img src="img/header.webp" alt="Imagen 1">
+      <img src="img/header2.png" alt="Imagen 2">
+      <img src="img/header3.jpg" alt="Imagen 3">
+    </div>
+
+    <!-- Botones de navegación -->
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</header>
     <section id="informacion" class="informacion-mision-vision">
         <div class="mision">
             <h4>Misión 👾</h4>
