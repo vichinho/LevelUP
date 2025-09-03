@@ -1,131 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEVEL UP</title>
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    
-</head>
-<body>
+    <link rel="stylesheet" href="static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header -->
     <div class="header-container">
-
-  <!-- Parte superior -->
-  <div class="barra-principal">
-    <a href="#"><i class="fas fa-user"></i> Mi cuenta</a>
-    <a href="#">Iniciar sesión</a>
-    <a href="#"><i class="fas fa-shopping-cart"></i> Usted tiene <strong>3</strong> productos en el carrito</a>
-  </div>
-
-  <!-- Parte inferior con nombre + buscador -->
-  <div class="nombre-buscador">
-    <div class="nombre">LEVELUP 升級</div>
-    <div class="buscador">
-      <input type="text" placeholder="Buscar...">
+      <!-- Parte superior -->
+      <div class="barra-principal">
+        <a href="#"><i class="fas fa-user"></i> Mi cuenta</a>
+        <a href="#">Iniciar sesión</a>
+        <a href="#"
+          ><i class="fas fa-shopping-cart"></i> Usted tiene
+          <strong>0</strong> productos en el carrito</a
+        >
+      </div>
+      <!-- Parte inferior con nombre + buscador -->
+      <div class="nombre-buscador">
+        <a href="index.html" class="logo-link">
+          <div class="nombre">LEVELUP 升級</div>
+        </a>
+        <div class="buscador">
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </div>
     </div>
-  </div>
-
-</div>
+    <!-- Navegación -->
     <nav>
       <ul>
-            <li><a href="#">Juegos de Mesa</a></li>
-            <li><a href="#">Accesorios</a></li>
-            <li><a href="#">Consolas</a></li>
-            <li><a href="#">Computadores Gamers</a></li>
-            <li><a href="#">Sillas Gamers</a></li>
-            <li><a href="#">Mouse</a></li>
-            <li><a href="#">Mousepad</a></li>
-            <li><a href="#">Poleras Personalizadas</a></li>
-            <li><a href="#">Polerones Gamers Personalizados</a></li>
-          </ul>
+        <li>
+          <a href="#" data-categoria="categoria-juegos">Juegos de Mesa</a>
+        </li>
+        <li>
+          <a href="#" data-categoria="categoria-accesorios">Accesorios</a>
+        </li>
+        <li><a href="#" data-categoria="categoria-consolas">Consolas</a></li>
+        <li>
+          <a href="#" data-categoria="categoria-computadores"
+            >Computadores Gamers</a
+          >
+        </li>
+        <li><a href="#" data-categoria="categoria-sillas">Sillas Gamers</a></li>
+        <li><a href="#" data-categoria="categoria-mouse">Mouse</a></li>
+        <li><a href="#" data-categoria="categoria-mousepad">Mousepad</a></li>
+        <li>
+          <a href="#" data-categoria="categoria-polerasp"
+            >Poleras Personalizadas</a
+          >
         </li>
       </ul>
     </nav>
+
+    <!-- Animaciones -->
     <div id="star-background"></div>
-    <div id="paw-animation"></div>    
-    <header>
-  <div class="carrusel">
-    <div class="slides">
-      <img src="img/header.webp" alt="Imagen 1">
-      <img src="img/header2.png" alt="Imagen 2">
-      <img src="img/header3.jpg" alt="Imagen 3">
+    <div id="paw-animation"></div>
+
+    <div class="texto-movimiento">
+      <span>
+        Descuento de por vida del 20% para usuarios registrados con correos de
+        <strong style="color: #f2a516">Duoc</strong
+        ><strong style="color: #013664">UC</strong></span
+      >
     </div>
 
-    <!-- Botones de navegación -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </div>
-</header>
+    <!-- Carrusel -->
+    <header>
+      <div class="carrusel">
+        <div class="slides">
+          <img src="img/header4.webp" alt="Imagen 1" class="active" />
+          <img src="img/header2.jpg" alt="Imagen 2" />
+          <img src="img/header3.webp" alt="Imagen 3" />
+        </div>
+      </div>
+    </header>
+    <!-- Información -->
     <section id="informacion" class="informacion-mision-vision">
-        <div class="mision">
-            <h4>Misión 👾</h4>
-            <p>Proporcionar productos de alta calidad para gamers en todo Chile, ofreciendo una experiencia de compra única y personalizada, con un enfoque en la satisfacción del cliente y el crecimiento de la comunidad gamer.</p>
-        </div>
-        <div class="divider"></div>
-        <div class="vision">
-            <h4>Visión 🎮</h4>
-            <p>Ser la tienda online líder en productos para gamers en Chile, reconocida por su innovación, servicio al cliente excepcional, y un programa de fidelización basado en gamificación que recompense a nuestros clientes más fieles.</p>
-        </div>
-        <div class="divider"></div>
-        <div class="nosotros">
-            <h4>Nosotros 🪀</h4>
-            <p>Level-Up Gamer es una tienda online dedicada a satisfacer las necesidades de los entusiastas de los videojuegos en Chile. Lanzada hace dos años como respuesta a la creciente demanda durante la pandemia</p>
-        </div>
+      <div class="mision">
+        <h4>Misión 👾</h4>
+        <p>
+          Proporcionar productos de alta calidad para gamers en todo Chile,
+          ofreciendo una experiencia de compra única y personalizada, con un
+          enfoque en la satisfacción del cliente y el crecimiento de la
+          comunidad gamer.
+        </p>
+      </div>
+      <div class="divider"></div>
+      <div class="vision">
+        <h4>Visión 🎮</h4>
+        <p>
+          Ser la tienda online líder en productos para gamers en Chile,
+          reconocida por su innovación, servicio al cliente excepcional, y un
+          programa de fidelización basado en gamificación que recompense a
+          nuestros clientes más fieles.
+        </p>
+      </div>
+      <div class="divider"></div>
+      <div class="nosotros">
+        <h4>Nosotros 🪀</h4>
+        <p>
+          Level-Up Gamer es una tienda online dedicada a satisfacer las
+          necesidades de los entusiastas de los videojuegos en Chile. Lanzada
+          hace dos años como respuesta a la creciente demanda durante la
+          pandemia.
+        </p>
+      </div>
     </section>
-    <section id="productos" class="product-section container">
-        <h2>Productos Destacados</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="img/ps5.webp" alt="Consola PlayStation 5">
-                <div class="product-info">
-                    <h3>PlayStation 5</h3>
-                    <p>Gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.</p>
-                    <div class="product-price">$749.990</div>                </div>
-            </div>
-            <div class="product-card">
-                <img src="img/silla.jpg" alt="Silla Gamer Secretlab Titan">
-                <div class="product-info">
-                    <h3>Silla Gamer Secretlab Titan</h3>
-                    <p>Diseñada para el máximo confort, con soporte ergonómico y personalización ajustable.</p>
-                    <div class="product-price">$489.990</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="img/hyperx.webp" alt="Auriculares Gamer HyperX Cloud II">
-                <div class="product-info">
-                    <h3>Auriculares HyperX Cloud II</h3>
-                    <p>Sonido envolvente de calidad con un micrófono desmontable y comodidad superior.</p>
-                    <div class="product-price">$99.990</div>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="img/catan.jpg" alt="Juego de Mesa Catan">
-                <div class="product-info">
-                    <h3>Juego de Mesa Catan</h3>
-                    <p>Un clásico de estrategia. Compite por colonizar la isla de Catan. Ideal para 3-4 jugadores.</p>
-                    <div class="product-price">$45.990</div>
-                </div>
-            </div>
+
+    <section class="product-section">
+      <h2>Nuestros Productos</h2>
+      <div class="product-grid">
+        <!-- Juegos de Mesa -->
+        <div class="product-card juegos-mesa">
+          <img src="img/catan.jpg" alt="Juego de Mesa Catan" />
+          <div class="product-info">
+            <h3>Catan</h3>
+            <div class="product-price">$29.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=catan">Ver Más</a>
+          </div>
         </div>
+
+        <div class="product-card juegos-mesa">
+          <img src="img/carca.jpg" alt="Juego de Mesa Carcassonne" />
+          <div class="product-info">
+            <h3>Carcassonne</h3>
+            <div class="product-price">$24.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=carca">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Accesorios -->
+        <div class="product-card accesorios">
+          <img src="img/controlx.webp" alt="Controlador Xbox Series X" />
+          <div class="product-info">
+            <h3>Control Xbox Series X</h3>
+            <div class="product-price">$59.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=controlx">Ver Más</a>
+          </div>
+        </div>
+
+        <div class="product-card accesorios">
+          <img src="img/hyperx.webp" alt="Auriculares HyperX Cloud II" />
+          <div class="product-info">
+            <h3>Auriculares HyperX Cloud II</h3>
+            <div class="product-price">$79.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=hyperx">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Consolas -->
+        <div class="product-card consolas">
+          <img src="img/ps5.webp" alt="PlayStation 5" />
+          <div class="product-info">
+            <h3>PlayStation 5</h3>
+            <div class="product-price">$549.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=ps5">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Computadores -->
+        <div class="product-card computadores">
+          <img src="img/rog.webp" alt="PC Gamer ASUS ROG Strix" />
+          <div class="product-info">
+            <h3>PC Gamer ASUS ROG Strix</h3>
+            <div class="product-price">$1.299.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=rog">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Sillas Gamers -->
+        <div class="product-card sillas">
+          <img src="img/silla.jpg" alt="Silla Gamer Secretlab Titan" />
+          <div class="product-info">
+            <h3>Silla Gamer Secretlab Titan</h3>
+            <div class="product-price">$349.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=silla">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Mouse -->
+        <div class="product-card mouse">
+          <img src="img/mouse.webp" alt="Mouse Gamer Logitech G502 HERO" />
+          <div class="product-info">
+            <h3>Mouse Logitech G502 HERO</h3>
+            <div class="product-price">$49.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=mouse">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Mousepad -->
+        <div class="product-card mousepad">
+          <img src="img/mousepad.webp" alt="Mousepad Razer Goliathus" />
+          <div class="product-info">
+            <h3>Mousepad Razer Goliathus</h3>
+            <div class="product-price">$29.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=mousepad">Ver Más</a>
+          </div>
+        </div>
+
+        <!-- Poleras -->
+        <div class="product-card poleras">
+          <img src="img/polera.webp" alt="Polera Gamer 'Level-Up'" />
+          <div class="product-info">
+            <h3>Polera Gamer 'Level-Up'</h3>
+            <div class="product-price">$14.990 CLP</div>
+            <a class="ver-mas" href="producto.html?id=polera">Ver Más</a>
+          </div>
+        </div>
+      </div>
     </section>
-    </div>
+    <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-column">
-                <h4>Sobre Nosotros</h4>
-                <ul>
-                    <li><a class="fc" href="#">Contacto</a></li>
-                    <li><a class="fc" href="#">Redes Sociales</a></li>
-                    <li><a class="fc" href="#">Términos y Condiciones</a></li>
-                </ul>
-            </div>  
-               
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3>LEVEL UP 升級</h3>
+          <p>
+            Tu tienda especializada en productos gaming. Donde los gamers
+            encuentran todo lo que necesitan para mejorar su experiencia de
+            juego.
+          </p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-twitch"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Level-Up Gamer. Todos los derechos reservados.</p>
+
+        <div class="footer-section">
+          <h4>Soporte</h4>
+          <ul>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+            <li><a href="#">Envíos y Entregas</a></li>
+            <li><a href="#">Política de Devoluciones</a></li>
+            <li><a href="#">Garantías</a></li>
+            <li><a href="#">Servicio Técnico</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
         </div>
+
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> contacto@levelupgamer.cl</p>
+            <p><i class="fas fa-phone"></i> +56 9 7654 3210</p>
+            <p><i class="fas fa-map-marker-alt"></i> Despachos a todo Chile</p>
+          </div>
+
+          <div class="newsletter">
+            <h4>Suscripciones</h4>
+            <p>Suscríbete para recibir ofertas exclusivas</p>
+            <div class="newsletter-form">
+              <input type="email" placeholder="Tu correo electrónico" />
+              <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2025 LEVELUP Gamer. Todos los derechos reservados. |
+          <a href="#">Términos y Condiciones</a> |
+          <a href="#">Política de Privacidad</a>
+        </p>
+      </div>
     </footer>
-    <script src="static/script.js"> </script>
-</body>
+
+    <!-- Script -->
+    <script src="static/script.js"></script>
+  </body>
 </html>

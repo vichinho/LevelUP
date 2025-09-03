@@ -47,28 +47,50 @@ function createPawCircle() {
 
 setInterval(createPawCircle, 200);
 
-let slideIndex = 0;
-  const slides = document.querySelector('.slides');
-  const totalSlides = slides.children.length;
+const slides = document.querySelectorAll(".slides img");
+let index = 0;
 
-  function showSlide(index) {
-    if (index >= totalSlides) slideIndex = 0;
-    if (index < 0) slideIndex = totalSlides - 1;
-    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
-  }
+function showSlide(n) {
+  slides.forEach((slide, i) => slide.classList.remove("active"));
+  slides[n].classList.add("active");
+}
 
-  document.querySelector('.next').addEventListener('click', () => {
-    slideIndex++;
-    showSlide(slideIndex);
+// Auto-play cada 5 segundos
+setInterval(() => {
+  index = (index + 1) % slides.length;
+  showSlide(index);
+}, 5000);
+
+const categoriaMap = {
+  "juegos de mesa": "juegos-mesa",
+  accesorios: "accesorios",
+  consolas: "consolas",
+  "computadores gamers": "computadores",
+  "sillas gamers": "sillas",
+  mouse: "mouse",
+  mousepad: "mousepad",
+  "poleras personalizadas": "poleras",
+};
+
+const navLinks = document.querySelectorAll("nav ul li a");
+const productos = document.querySelectorAll(".product-card");
+const productSection = document.querySelector(".product-section");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const categoriaTexto = link.textContent.toLowerCase();
+    const claseCategoria = categoriaMap[categoriaTexto];
+
+    productos.forEach((p) => {
+      if (!claseCategoria) {
+        p.classList.remove("oculto");
+      } else {
+        p.classList.toggle("oculto", !p.classList.contains(claseCategoria));
+      }
+    });
+
+    // Scroll suave hacia la sección de productos
+    productSection.scrollIntoView({ behavior: "smooth" });
   });
-
-  document.querySelector('.prev').addEventListener('click', () => {
-    slideIndex--;
-    showSlide(slideIndex);
-  });
-
-  // Auto-slide cada 5 segundos
-  setInterval(() => {
-    slideIndex++;
-    showSlide(slideIndex);
-  }, 5000);
+});
