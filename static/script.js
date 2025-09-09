@@ -94,3 +94,29 @@ navLinks.forEach((link) => {
     productSection.scrollIntoView({ behavior: "smooth" });
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const formulario = document.getElementById("formulario-login");
+
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario se envíe automáticamente
+        verificarLogin();       // Llama a la función de validación
+    });
+});
+
+function verificarLogin() {
+    const usuario = document.getElementById("usuario").value;
+    const contrasena = document.getElementById("contrasena").value;
+    const mensajeError = document.getElementById("mensaje-error");
+
+    const usuarioValido = "admin";
+    const contrasenaValida = "1234";
+
+    if (usuario === usuarioValido && contrasena === contrasenaValida) {
+        window.location.href = "perfil.html";
+    } else {
+        mensajeError.style.display = "block";
+    }
+}
+
