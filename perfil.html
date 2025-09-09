@@ -4,9 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
-    <link rel="stylesheet" href="static/styleslogin.css">
+    <link rel="stylesheet" href="static/styles.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
 </head>
 <body>
-    
+    <!-- Header -->
+    <div class="header-container">
+      <!-- Parte superior -->
+      <div class="barra-principal">
+  <a href="#" id="mi-cuenta"><i class="fas fa-user"></i> Mi cuenta</a>
+  <a href="login.html" id="iniciar-sesion">Iniciar sesión</a>
+  <a href="#"><i class="fas fa-shopping-cart"></i> Usted tiene <strong>0</strong> productos en el carrito</a>
+</div>
+
+      <!-- Parte inferior con nombre + buscador -->
+      <div class="nombre-buscador">
+        <a href="index.html" class="logo-link">
+          <div class="nombre">LEVELUP 升級</div>
+        </a>
+        <div class="buscador">
+          <input type="text" placeholder="Buscar..." />
+        </div>
+      </div>
+    </div>
+    <script src="static/login-status.js"></script>
+
 </body>
 </html>

@@ -15,13 +15,11 @@
     <div class="header-container">
       <!-- Parte superior -->
       <div class="barra-principal">
-        <a href="#"><i class="fas fa-user"></i> Mi cuenta</a>
-        <a href="#">Iniciar sesión</a>
-        <a href="#"
-          ><i class="fas fa-shopping-cart"></i> Usted tiene
-          <strong>0</strong> productos en el carrito</a
-        >
-      </div>
+  <a href="#" id="mi-cuenta"><i class="fas fa-user"></i> Mi cuenta</a>
+  <a href="login.html" id="iniciar-sesion">Iniciar sesión</a>
+  <a href="#"><i class="fas fa-shopping-cart"></i> Usted tiene <strong>0</strong> productos en el carrito</a>
+</div>
+
       <!-- Parte inferior con nombre + buscador -->
       <div class="nombre-buscador">
         <a href="index.html" class="logo-link">
@@ -274,7 +272,11 @@
       </div>
     </footer>
 
-    <!-- Script -->
-    <script src="static/script.js"></script>
+    <!-- Tu script principal para otras funcionalidades -->
+<script src="static/script.js"></script>
+
+<!-- Script para manejar el login y modificar la barra -->
+<script src="static/login-status.js"></script>
+
   </body>
 </html>

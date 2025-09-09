@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 function verificarLogin() {
+    localStorage.setItem("usuarioLogueado", "admin");
     const usuario = document.getElementById("usuario").value;
     const contrasena = document.getElementById("contrasena").value;
     const mensajeError = document.getElementById("mensaje-error");
@@ -119,4 +120,24 @@ function verificarLogin() {
         mensajeError.style.display = "block";
     }
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const usuario = localStorage.getItem("usuarioLogueado");
+    const miCuenta = document.getElementById("mi-cuenta");
+    const iniciarSesion = document.getElementById("iniciar-sesion");
+
+    if (usuario) {
+        // Cambia "Mi cuenta" a link al perfil
+        miCuenta.href = "perfil.html";
+        miCuenta.innerHTML = '<i class="fas fa-user"></i> Perfil';
+
+        // Reemplaza "Iniciar sesión" por "Cerrar sesión"
+        iniciarSesion.href = "#";
+        iniciarSesion.textContent = "Cerrar sesión";
+        iniciarSesion.addEventListener("click", function () {
+            localStorage.removeItem("usuarioLogueado");
+            location.reload(); // Recarga la página para reflejar cambios
+        });
+    }
+});
 
