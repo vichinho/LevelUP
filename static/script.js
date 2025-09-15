@@ -115,7 +115,7 @@ function verificarLogin() {
     const contrasenaValida = "1234";
 
     if (usuario === usuarioValido && contrasena === contrasenaValida) {
-        window.location.href = "perfil.html";
+        window.location.href = "perfiladm.html";
     } else {
         mensajeError.style.display = "block";
     }
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (usuario) {
         // Cambia "Mi cuenta" a link al perfil
-        miCuenta.href = "perfil.html";
+        miCuenta.href = "perfiladm.html";
         miCuenta.innerHTML = '<i class="fas fa-user"></i> Perfil';
 
         // Reemplaza "Iniciar sesión" por "Cerrar sesión"
