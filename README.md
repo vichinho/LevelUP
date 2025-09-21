@@ -1,4 +1,5 @@
-✨ Características Principales
+# ✨ Características Principales
+
 Diseño responsive con enfoque en experiencia móvil
 
 Sistema de registro con validación de edad (mayores de 18 años)
@@ -15,7 +16,8 @@ Programa de referidos con recompensas
 
 Reseñas y calificaciones de productos
 
-📦 Categorías de Productos
+# 📦 Categorías de Productos
+
 🎲 Juegos de Mesa
 
 🎧 Accesorios Gamer
@@ -30,7 +32,8 @@ Reseñas y calificaciones de productos
 
 👕 Poleras y Polerones Personalizados
 
-🛠️ Tecnologías Utilizadas
+# 🛠️ Tecnologías Utilizadas
+
 Frontend: HTML5, CSS3, JavaScript
 
 Fuentes: Google Fonts (Roboto, Orbitron, Montserrat)
@@ -39,7 +42,8 @@ Iconos: Font Awesome
 
 Efectos Visuales: Animaciones CSS personalizadas
 
-🌟 Características de Diseño
+# 🌟 Características de Diseño
+
 Interfaz moderna con temática gamer
 
 Navegación intuitiva y fluida
@@ -50,7 +54,8 @@ Paleta de colores coherente con la identidad gamer
 
 Tipografía que refleja el estilo futurista
 
-📱 Responsividad
+# 📱 Responsividad
+
 Diseño completamente adaptable a:
 
 📱 Dispositivos móviles
@@ -59,7 +64,8 @@ Diseño completamente adaptable a:
 
 🖥️ Desktop
 
-🚀 Próximas Características
+# 🚀 Próximas Características
+
 Según el documento de requerimientos:
 
 Mapa de ubicaciones de eventos gamers
