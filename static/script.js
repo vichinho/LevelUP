@@ -1,22 +1,10 @@
-const animationContainer = document.getElementById("animal-animation");
-
-function createPaw() {
-  const paw = document.createElement("div");
-  paw.classList.add("paw");
-  paw.style.left = Math.random() * window.innerWidth + "px";
-  paw.style.animationDuration = 2 + Math.random() * 3 + "s";
-  animationContainer.appendChild(paw);
-
-  setTimeout(() => {
-    paw.remove();
-  }, 5000);
-}
-
-setInterval(createPaw, 300);
+/* ==============================
+   ANIMACIONES DE FONDO
+============================== */
 
 // Crear estrellas estáticas
 const starContainer = document.getElementById("star-background");
-const starCount = 150; // Número de estrellas
+const starCount = 150;
 
 for (let i = 0; i < starCount; i++) {
   const star = document.createElement("div");
@@ -47,6 +35,9 @@ function createPawCircle() {
 
 setInterval(createPawCircle, 200);
 
+/* ==============================
+   CARRUSEL AUTOMÁTICO
+============================== */
 const slides = document.querySelectorAll(".slides img");
 let index = 0;
 
@@ -61,6 +52,9 @@ setInterval(() => {
   showSlide(index);
 }, 5000);
 
+/* ==============================
+   FILTRADO DE PRODUCTOS POR CATEGORÍA
+============================== */
 const categoriaMap = {
   "juegos de mesa": "juegos-mesa",
   accesorios: "accesorios",
@@ -95,49 +89,78 @@ navLinks.forEach((link) => {
   });
 });
 
-
+/* ==============================
+   SISTEMA DE LOGIN
+============================== */
 document.addEventListener("DOMContentLoaded", function () {
-    const formulario = document.getElementById("formulario-login");
+  const formulario = document.getElementById("formulario-login");
 
+  if (formulario) {
     formulario.addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que el formulario se envíe automáticamente
-        verificarLogin();       // Llama a la función de validación
+      event.preventDefault();
+      verificarLogin();
     });
+  }
+
+  verificarEstadoSesion();
 });
 
 function verificarLogin() {
+  const usuario = document.getElementById("usuario").value;
+  const contrasena = document.getElementById("contrasena").value;
+  const mensajeError = document.getElementById("mensaje-error");
+
+  const usuarioValido = "admin";
+  const contrasenaValida = "1234";
+
+  if (usuario === usuarioValido && contrasena === contrasenaValida) {
     localStorage.setItem("usuarioLogueado", "admin");
-    const usuario = document.getElementById("usuario").value;
-    const contrasena = document.getElementById("contrasena").value;
-    const mensajeError = document.getElementById("mensaje-error");
-
-    const usuarioValido = "admin";
-    const contrasenaValida = "1234";
-
-    if (usuario === usuarioValido && contrasena === contrasenaValida) {
-        window.location.href = "perfiladm.html";
-    } else {
-        mensajeError.style.display = "block";
-    }
+    window.location.href = "perfiladm.html";
+  } else {
+    mensajeError.style.display = "block";
+  }
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-    const usuario = localStorage.getItem("usuarioLogueado");
-    const miCuenta = document.getElementById("mi-cuenta");
-    const iniciarSesion = document.getElementById("iniciar-sesion");
+/* ==============================
+   GESTIÓN DEL ESTADO DE SESIÓN
+============================== */
+function verificarEstadoSesion() {
+  const usuario = localStorage.getItem("usuarioLogueado");
+  const miCuenta = document.getElementById("mi-cuenta");
+  const iniciarSesion = document.getElementById("iniciar-sesion");
 
-    if (usuario) {
-        // Cambia "Mi cuenta" a link al perfil
-        miCuenta.href = "perfiladm.html";
-        miCuenta.innerHTML = '<i class="fas fa-user"></i> Perfil';
+  if (usuario && miCuenta && iniciarSesion) {
+    // Cambia "Mi cuenta" a link al perfil
+    miCuenta.href = "perfiladm.html";
+    miCuenta.innerHTML = '<i class="fas fa-user"></i> Perfil';
 
-        // Reemplaza "Iniciar sesión" por "Cerrar sesión"
-        iniciarSesion.href = "#";
-        iniciarSesion.textContent = "Cerrar sesión";
-        iniciarSesion.addEventListener("click", function () {
-            localStorage.removeItem("usuarioLogueado");
-            location.reload(); // Recarga la página para reflejar cambios
-        });
-    }
-});
+    // Reemplaza "Iniciar sesión" por "Cerrar sesión"
+    iniciarSesion.href = "#";
+    iniciarSesion.textContent = "Cerrar sesión";
 
+    iniciarSesion.addEventListener("click", function (e) {
+      e.preventDefault();
+      localStorage.removeItem("usuarioLogueado");
+      location.reload();
+    });
+  }
+}
+
+/* ==============================
+   ANIMACIÓN DE HUELLAS (FUNCIÓN ORIGINAL)
+============================== */
+const animationContainer = document.getElementById("animal-animation");
+
+function createPaw() {
+  const paw = document.createElement("div");
+  paw.classList.add("paw");
+  paw.style.left = Math.random() * window.innerWidth + "px";
+  paw.style.animationDuration = 2 + Math.random() * 3 + "s";
+  animationContainer.appendChild(paw);
+
+  setTimeout(() => {
+    paw.remove();
+  }, 5000);
+}
+
+setInterval(createPaw, 300);

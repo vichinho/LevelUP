@@ -1,5 +1,6 @@
-// Base de datos de productos (podría estar en un archivo aparte)
-// Base de datos de productos para LEVEL UP Gamer
+/* ==============================
+   BASE DE DATOS DE PRODUCTOS
+============================== */
 const products = {
   catan: {
     id: "JM001",
@@ -213,60 +214,71 @@ const products = {
   },
 };
 
-// Función para cargar los datos del producto
+/* ==============================
+   FUNCIONES DE UTILIDAD
+============================== */
+function getProductIdFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
+
+function formatPrice(price) {
+  return `$${parseInt(price).toLocaleString("es-CL")} CLP`;
+}
+
+/* ==============================
+   GESTIÓN DE DETALLES DE PRODUCTO
+============================== */
 function loadProductData() {
-  // Obtener el ID del producto de la URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const productId = urlParams.get("id");
+  const productId = getProductIdFromURL();
 
   if (productId && products[productId]) {
     const product = products[productId];
-
-    // Actualizar los elementos de la página
-    document.getElementById("product-title").textContent = product.name;
-    document.getElementById("product-price").textContent = product.price;
-    document.getElementById("product-img").src = product.image;
-    document.getElementById("product-img").alt = product.name;
-    document.getElementById("product-description").textContent =
-      product.description;
-    document.getElementById("category-link").textContent = product.category;
-    document.getElementById("category-link").href = product.categoryLink;
-    document.getElementById("product-name").textContent = product.name;
-
-    // Cargar características
-    const featuresContainer = document.getElementById("product-features");
-    featuresContainer.innerHTML = "<h3>Características:</h3><ul>";
-
-    product.features.forEach((feature) => {
-      featuresContainer.innerHTML += `<li>${feature}</li>`;
-    });
-
-    featuresContainer.innerHTML += "</ul>";
-
-    // Actualizar título de la página
-    document.title = `${product.name} - LEVEL UP`;
+    updateProductDetails(product);
   } else {
-    // Producto no encontrado
-    document.querySelector(".product-detail-container").innerHTML = `
-                    <div style="text-align: center; width: 100%; padding: 50px 0;">
-                        <h2>Producto no encontrado</h2>
-                        <p>El producto que buscas no está disponible.</p>
-                        <a href="index.html">Volver a la página principal</a>
-                    </div>
-                `;
+    showProductNotFound();
   }
 }
 
-// Función para agregar al carrito
-function addToCart() {
-  // Aquí iría la lógica para agregar el producto al carrito
-  alert("Producto agregado al carrito");
-  // En una implementación real, esto actualizaría el contador del carrito
+function updateProductDetails(product) {
+  // Actualizar elementos de la página
+  document.getElementById("product-title").textContent = product.name;
+  document.getElementById("product-price").textContent = product.price;
+  document.getElementById("product-img").src = product.image;
+  document.getElementById("product-img").alt = product.name;
+  document.getElementById("product-description").textContent =
+    product.description;
+  document.getElementById("category-link").textContent = product.category;
+  document.getElementById("category-link").href = product.categoryLink;
+  document.getElementById("product-name").textContent = product.name;
+
+  // Cargar características
+  const featuresContainer = document.getElementById("product-features");
+  featuresContainer.innerHTML = "<h3>Características:</h3><ul>";
+
+  product.features.forEach((feature) => {
+    featuresContainer.innerHTML += `<li>${feature}</li>`;
+  });
+
+  featuresContainer.innerHTML += "</ul>";
+
+  // Actualizar título de la página
+  document.title = `${product.name} - LEVEL UP`;
 }
 
-// Cargar los datos del producto cuando la página esté lista
-document.addEventListener("DOMContentLoaded", loadProductData);
+function showProductNotFound() {
+  document.querySelector(".product-detail-container").innerHTML = `
+        <div style="text-align: center; width: 100%; padding: 50px 0;">
+            <h2>Producto no encontrado</h2>
+            <p>El producto que buscas no está disponible.</p>
+            <a href="index.html">Volver a la página principal</a>
+        </div>
+    `;
+}
 
+/* ==============================
+   GESTIÓN DE TABLA DE PRODUCTOS
+============================== */
 const tableBody = document.getElementById("product-table-body");
 
 function cargarProductos() {
@@ -275,17 +287,16 @@ function cargarProductos() {
   for (let key in products) {
     const p = products[key];
     tableBody.innerHTML += `
-          <tr id="row-${key}">
-            <td><img src="${p.image}" alt="${p.name}"></td>
-            <td>${p.name}</td>
-            <td>${p.price}</td>
-            <td>${p.category}</td>
-            <td>${p.stock ?? "N/A"}</td>
-            <td>
-              <button onclick="eliminarProducto('catan')" class="btn-eliminar">Eliminar</button>
-
-            </td>
-          </tr>
+            <tr id="row-${key}">
+                <td><img src="${p.image}" alt="${p.name}"></td>
+                <td>${p.name}</td>
+                <td>${p.price}</td>
+                <td>${p.category}</td>
+                <td>${p.stock ?? "N/A"}</td>
+                <td>
+                    <button onclick="eliminarProducto('${key}')" class="btn-eliminar">Eliminar</button>
+                </td>
+            </tr>
         `;
   }
 }
@@ -298,61 +309,25 @@ function eliminarProducto(id) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", cargarProductos);
-
-function getProductIdFromURL() {
-  const params = new URLSearchParams(window.location.search);
-  return params.get("id");
-}
-
-function formatPrice(price) {
-  return `$${parseInt(price).toLocaleString("es-CL")} CLP`;
-}
-
-function showProductDetails() {
-  const productId = getProductIdFromURL();
-
-  if (!productId || !products[productId]) {
-    document.querySelector(".product-detail-container").innerHTML =
-      "<p>Producto no encontrado.</p>";
-    return;
-  }
-
-  const p = products[productId];
-
-  // Set title, image, price, description, features
-  document.getElementById("product-title").textContent = p.name;
-  document.getElementById("product-img").src = p.image;
-  document.getElementById("product-img").alt = p.name;
-  document.getElementById("product-price").textContent = p.price;
-  document.getElementById("product-description").textContent =
-    p.description ?? "Sin descripción.";
-
-  // Features
-  const featuresContainer = document.getElementById("product-features");
-  if (p.features && Array.isArray(p.features)) {
-    const ul = document.createElement("ul");
-    p.features.forEach((feature) => {
-      const li = document.createElement("li");
-      li.textContent = feature;
-      ul.appendChild(li);
-    });
-    featuresContainer.innerHTML = "<strong>Características:</strong>";
-    featuresContainer.appendChild(ul);
-  } else {
-    featuresContainer.textContent = "Sin características disponibles.";
-  }
-
-  // Migas de pan
-  document.getElementById("product-name").textContent = p.name;
-  const categoryLink = document.getElementById("category-link");
-  categoryLink.textContent = p.category ?? "Categoría";
-  categoryLink.href = `index.html?categoria=${encodeURIComponent(p.category)}`;
-}
-
-// Simulación de agregar al carrito
+/* ==============================
+   FUNCIONES DE CARRITO
+============================== */
 function addToCart() {
-  alert("Producto agregado al carrito (funcionalidad simulada).");
+  alert("Producto agregado al carrito");
+  // En una implementación real, esto actualizaría el contador del carrito
 }
 
-document.addEventListener("DOMContentLoaded", showProductDetails);
+/* ==============================
+   INICIALIZACIÓN
+============================== */
+document.addEventListener("DOMContentLoaded", function () {
+  // Cargar detalles del producto si estamos en una página de producto
+  if (document.getElementById("product-title")) {
+    loadProductData();
+  }
+
+  // Cargar tabla de productos si existe
+  if (tableBody) {
+    cargarProductos();
+  }
+});
