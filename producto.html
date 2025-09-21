@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalles del Producto - LEVEL UP</title>
-    <link rel="stylesheet" href="static/styles.css"/>
-    <link rel="icon" href="img/icon.png" type="image"/>
+    <link rel="stylesheet" href="static/styles.css" />
+    <link rel="icon" href="img/icon.png" type="image" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -197,15 +197,6 @@
             <p><i class="fas fa-phone"></i> +56 9 7654 3210</p>
             <p><i class="fas fa-map-marker-alt"></i> Despachos a todo Chile</p>
           </div>
-
-          <div class="newsletter">
-            <h4>Suscripciones</h4>
-            <p>Suscríbete para recibir ofertas exclusivas</p>
-            <div class="newsletter-form">
-              <input type="email" placeholder="Tu correo electrónico" />
-              <button><i class="fas fa-paper-plane"></i></button>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -219,61 +210,6 @@
     </footer>
 
     <script src="static/products.js"></script>
-<script>
-  function getProductIdFromURL() {
-    const params = new URLSearchParams(window.location.search);
-    return params.get('id');
-  }
-
-  function formatPrice(price) {
-    return `$${parseInt(price).toLocaleString('es-CL')} CLP`;
-  }
-
-  function showProductDetails() {
-    const productId = getProductIdFromURL();
-
-    if (!productId || !products[productId]) {
-      document.querySelector(".product-detail-container").innerHTML = "<p>Producto no encontrado.</p>";
-      return;
-    }
-
-    const p = products[productId];
-
-    // Set title, image, price, description, features
-    document.getElementById("product-title").textContent = p.name;
-    document.getElementById("product-img").src = p.image;
-    document.getElementById("product-img").alt = p.name;
-    document.getElementById("product-price").textContent = p.price;
-    document.getElementById("product-description").textContent = p.description ?? "Sin descripción.";
-    
-    // Features
-    const featuresContainer = document.getElementById("product-features");
-    if (p.features && Array.isArray(p.features)) {
-      const ul = document.createElement("ul");
-      p.features.forEach(feature => {
-        const li = document.createElement("li");
-        li.textContent = feature;
-        ul.appendChild(li);
-      });
-      featuresContainer.innerHTML = "<strong>Características:</strong>";
-      featuresContainer.appendChild(ul);
-    } else {
-      featuresContainer.textContent = "Sin características disponibles.";
-    }
-
-    // Migas de pan
-    document.getElementById("product-name").textContent = p.name;
-    const categoryLink = document.getElementById("category-link");
-    categoryLink.textContent = p.category ?? "Categoría";
-    categoryLink.href = `index.html?categoria=${encodeURIComponent(p.category)}`;
-  }
-
-  // Simulación de agregar al carrito
-  function addToCart() {
-    alert("Producto agregado al carrito (funcionalidad simulada).");
-  }
-
-  document.addEventListener("DOMContentLoaded", showProductDetails);
-</script>
+    <script></script>
   </body>
 </html>

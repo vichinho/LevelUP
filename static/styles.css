@@ -1,12 +1,12 @@
 /* ==============================
-   IMPORTS DE FUENTES
-============================== */
+           IMPORTS DE FUENTES
+        ============================== */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 /* ==============================
-   VARIABLES
-============================== */
+           VARIABLES
+        ============================== */
 :root {
   --bg-dark: #1d1d1d;
   --bg-darker: #1f1f1e;
@@ -22,8 +22,8 @@
 }
 
 /* ==============================
-   RESETEO Y BASE
-============================== */
+           RESETEO Y BASE
+        ============================== */
 * {
   margin: 0;
   padding: 0;
@@ -38,8 +38,97 @@ body {
 }
 
 /* ==============================
-   NAVBAR
-============================== */
+           HEADER SUPERIOR
+        ============================== */
+.header-container {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.barra-principal {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 25px;
+  font-size: 15px;
+  padding: 15px 20px;
+}
+
+.barra-principal a {
+  text-decoration: none;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.barra-principal a:hover {
+  color: var(--gold);
+}
+
+.barra-principal i {
+  margin-right: 5px;
+}
+
+/* ==============================
+           NOMBRE + BUSCADOR
+        ============================== */
+.nombre-buscador {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  color: var(--black);
+}
+
+.nombre-buscador .logo-link {
+  font-size: 2.5rem;
+  font-family: "Permanent Marker", cursive;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.buscador input[type="text"] {
+  width: 220px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid var(--gray-light);
+  border-radius: 5px;
+  outline: none;
+}
+
+/* ==============================
+           TEXTO EN MOVIMIENTO
+        ============================== */
+.texto-movimiento {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--bg-darker);
+  color: #ffffff;
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.texto-movimiento span {
+  display: inline-block;
+  padding-left: 100%;
+  animation: moverTexto 30s linear infinite;
+}
+
+@keyframes moverTexto {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* ==============================
+           NAVBAR
+        ============================== */
 nav {
   background-color: var(--bg-darker);
   display: flex;
@@ -72,141 +161,15 @@ nav ul li a:hover {
 }
 
 /* ==============================
-   HEADER SUPERIOR
-============================== */
-.header-container {
-  background-color: var(--white);
-  color: var(--black);
-}
-
-.barra-principal {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 25px;
-  font-size: 15px;
-  padding: 15px 20px;
-}
-
-.barra-principal a {
-  text-decoration: none;
-  color: var(--black);
-  transition: 0.3s;
-}
-
-.barra-principal a:hover {
-  color: var(--gold);
-}
-
-.barra-principal i {
-  margin-right: 5px;
-}
-
-/* ==============================
-   NOMBRE + BUSCADOR
-============================== */
-.nombre-buscador {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 20px;
-  color: var(--black);
-}
-.nombre-buscador .logo-link {
-  font-size: 2.5rem;
-  font-family: "Permanent Marker", cursive;
-  color: var(--black);
-  text-decoration: none;
-}
-
-.buscador input[type="text"] {
-  width: 220px;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid var(--gray-light);
-  border-radius: 5px;
-  outline: none;
-}
-
-.texto-movimiento {
-  width: 100%;
-  overflow: hidden; /* esconde el texto cuando sale del contenedor */
-  white-space: nowrap; /* evita que el texto haga salto de línea */
-  box-sizing: border-box;
-  background-color: #232221; /* opcional, fondo del texto */
-  color: #cd7f32;
-  padding: 10px 0;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Animación */
-.texto-movimiento span {
-  display: inline-block;
-  padding-left: 100%; /* empieza fuera del contenedor */
-  animation: moverTexto 15s linear infinite;
-}
-
-@keyframes moverTexto {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .texto-movimiento {
-    font-size: 1rem;
-  }
-}
-.texto-movimiento {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  background-color: var(--bg-darker); /* fondo opcional */
-  color: #ffffff;
-  font-size: 1rem;
-  box-sizing: border-box;
-  padding: 10px 0;
-}
-
-.texto-movimiento span {
-  display: inline-block;
-  padding-left: 100%; /* empieza fuera a la derecha */
-  animation: moverTexto 30s linear infinite;
-}
-
-@keyframes moverTexto {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .texto-movimiento {
-    font-size: 1rem;
-  }
-}
-
-/* ==============================
-   CARRUSEL
-============================== */
+           CARRUSEL
+        ============================== */
 .carrusel {
   position: relative;
   width: 100%;
-  height: 60vh; /* altura estándar del carrusel */
+  height: 60vh;
   max-height: 600px;
   overflow: hidden;
-  background-color: #00000000; /* fondo por si hay bordes */
+  background-color: #00000000;
 }
 
 .slides {
@@ -215,7 +178,6 @@ nav ul li a:hover {
   height: 100%;
 }
 
-/* Imágenes centradas y ajustadas */
 .slides img {
   position: absolute;
   top: 50%;
@@ -223,7 +185,7 @@ nav ul li a:hover {
   max-width: 100%;
   max-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: contain; /* muestra la imagen completa */
+  object-fit: contain;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
@@ -233,24 +195,31 @@ nav ul li a:hover {
   z-index: 1;
 }
 
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  font-size: 1.5rem;
+}
+
 .prev {
   left: 10px;
 }
+
 .next {
   right: 10px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .carrusel {
-    height: 40vh;
-  }
-  .carrusel button {
-    font-size: 1.2rem;
-    padding: 8px;
-  }
-}
-
+/* ==============================
+           SECCIÓN DE PRODUCTOS
+        ============================== */
 .product-section {
   padding: 50px 20px;
   text-align: center;
@@ -265,13 +234,10 @@ nav ul li a:hover {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(260px, 260px)
-  ); /* ancho fijo de card */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 260px));
   gap: 25px;
-  justify-content: center; /* centra las cards si hay pocas */
-  max-width: 1200px; /* opcional para no expandir demasiado */
+  justify-content: center;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -325,15 +291,13 @@ nav ul li a:hover {
 }
 
 .product-card.oculto {
-  display: none; /* solo oculta sin romper el grid */
+  display: none;
 }
 
 .ver-mas {
   margin-top: auto;
   padding: 10px 20px;
-  background-color: var(
-    --bg-hover
-  ); /* Ajustado para encajar en tu tema; puedes cambiar a var(--gold) u otro si prefieres */
+  background-color: var(--bg-hover);
   color: var(--white);
   border: none;
   cursor: pointer;
@@ -350,50 +314,9 @@ nav ul li a:hover {
   color: var(--bg-darker);
 }
 
-@media (max-width: 768px) {
-  .ver-mas {
-    padding: 8px 16px; /* Ajuste para responsividad en móviles */
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(
-      auto-fit,
-      minmax(200px, 1fr)
-    ); /* Ajusta el ancho mínimo para pantallas pequeñas */
-    gap: 15px;
-  }
-
-  .product-card img {
-    height: 180px; /* Opcional: reduce altura de imagen en móviles para mejor ajuste */
-  }
-}
-/* Responsive */
-@media (max-width: 768px) {
-  .product-section {
-    padding: 30px 15px;
-  }
-
-  .product-section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-  }
-
-  .product-info h3 {
-    font-size: 1rem;
-  }
-
-  .product-info p {
-    font-size: 0.85rem;
-  }
-
-  .product-price {
-    font-size: 1rem;
-  }
-}
-
 /* ==============================
-   MISIÓN - VISIÓN - NOSOTROS
-============================== */
+           MISIÓN - VISIÓN - NOSOTROS
+        ============================== */
 .informacion-mision-vision {
   display: flex;
   flex-wrap: wrap;
@@ -424,8 +347,8 @@ nav ul li a:hover {
 }
 
 /* ==============================
-   EFECTOS DE FONDO
-============================== */
+           EFECTOS DE FONDO
+        ============================== */
 #star-background,
 #paw-animation {
   position: fixed;
@@ -470,26 +393,8 @@ nav ul li a:hover {
 }
 
 /* ==============================
-   RESPONSIVIDAD
-============================== */
-@media (max-width: 768px) {
-  .nombre-buscador {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .barra-principal {
-    flex-direction: column;
-    gap: 10px;
-    font-size: 14px;
-  }
-}
-
+           FOOTER
+        ============================== */
 footer {
   background: var(--bg-dark);
   color: white;
@@ -655,8 +560,73 @@ footer {
   text-decoration: underline;
 }
 
-/* Responsive */
+/* ==============================
+           RESPONSIVIDAD
+        ============================== */
 @media (max-width: 768px) {
+  .nombre-buscador {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .barra-principal {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .carrusel {
+    height: 40vh;
+  }
+
+  .carrusel button {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+
+  .texto-movimiento {
+    font-size: 1rem;
+  }
+
+  .product-section {
+    padding: 30px 15px;
+  }
+
+  .product-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+  }
+
+  .product-card img {
+    height: 180px;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.85rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .ver-mas {
+    padding: 8px 16px;
+  }
+
   .footer-container {
     flex-direction: column;
   }

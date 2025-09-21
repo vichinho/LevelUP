@@ -1,94 +1,71 @@
-# 🌐 Level-Up Gamer - Web
+✨ Características Principales
+Diseño responsive con enfoque en experiencia móvil
 
-Este repositorio contiene el desarrollo de la **versión web** de la tienda online **Level-Up Gamer**, enfocada en entregar una experiencia gamer moderna, atractiva y funcional para los usuarios.
+Sistema de registro con validación de edad (mayores de 18 años)
 
----
+Descuento especial para usuarios con correo Duoc (20% permanente)
 
-## ✨ Misión
+Catálogo categorizado con filtros avanzados
 
-> Proporcionar productos de alta calidad para gamers en todo Chile, ofreciendo una experiencia de compra única y personalizada, con un enfoque en la satisfacción del cliente y el crecimiento de la comunidad gamer.
+Carrito de compras interactivo
 
----
+Sistema de gamificación con puntos LevelUp
 
-## 🚀 Visión
+Programa de referidos con recompensas
 
-> Ser la tienda online líder en productos para gamers en Chile, reconocida por su innovación, servicio al cliente excepcional, y un programa de fidelización basado en gamificación que recompense a nuestros clientes más fieles.
+Reseñas y calificaciones de productos
 
----
+📦 Categorías de Productos
+🎲 Juegos de Mesa
 
-## 📌 Funcionalidades Web
+🎧 Accesorios Gamer
 
-### 🛒 Catálogo y Compras
+🕹️ Consolas
 
-- Visualización de productos categorizados (juegos de mesa, consolas, sillas gamer, etc.).
-- Búsqueda avanzada y filtros dinámicos.
-- Carrito de compras interactivo (agregar, eliminar, modificar productos).
-- Cálculo automático de precios y totales.
+💻 Computadores Gamers
 
-### 👤 Usuarios
+🪑 Sillas Gamers
 
-- Registro de usuarios (validación +18 años).
-- Descuento de por vida del **20%** con correos DUOC.
-- Inicio de sesión con validaciones.
-- Gestión de perfil (editar datos y preferencias).
+🖱️ Mouse y Mousepads
 
-### ⭐ Gamificación
+👕 Poleras y Polerones Personalizados
 
-- Sistema de referidos al registrarse.
-- Puntos **LevelUp** por compras y referidos.
-- Visualización de niveles y beneficios.
+🛠️ Tecnologías Utilizadas
+Frontend: HTML5, CSS3, JavaScript
 
-### 💬 Comunidad y Extras
+Fuentes: Google Fonts (Roboto, Orbitron, Montserrat)
 
-- Blog con noticias y artículos gamer.
-- Reseñas y calificaciones de productos.
-- Mapa con eventos gamer en Chile.
-- Botón de soporte vía WhatsApp.
-- Integración con redes sociales (compartir productos).
+Iconos: Font Awesome
 
----
+Efectos Visuales: Animaciones CSS personalizadas
 
-## 🎨 Diseño Visual
+🌟 Características de Diseño
+Interfaz moderna con temática gamer
 
-### Colores
+Navegación intuitiva y fluida
 
-- **Fondo principal:** Negro `#000000`
-- **Botones/acento:** Azul eléctrico `#1E90FF` y Verde neón `#39FF14`
-- **Texto principal:** Blanco `#FFFFFF`
-- **Texto secundario:** Gris claro `#D3D3D3`
+Efectos visuales con estrellas y huellas animadas
 
-### Tipografías
+Paleta de colores coherente con la identidad gamer
 
-- [Roboto](https://fonts.google.com/specimen/Roboto) (texto general).
-- [Orbitron](https://fonts.google.com/specimen/Orbitron) (encabezados futuristas).
+Tipografía que refleja el estilo futurista
 
----
+📱 Responsividad
+Diseño completamente adaptable a:
 
-## 📂 Tecnologías Web
+📱 Dispositivos móviles
 
-- **HTML5** → estructura y semántica.
-- **CSS3** → estilos visuales (se recomienda Tailwind o Bootstrap).
-- **JavaScript** → interactividad (carrito, filtros, validaciones).
-- **Opcional:** librerías como **Swiper.js** para carruseles, **Leaflet/Google Maps API** para mapa de eventos.
+💻 Tablets
 
----
+🖥️ Desktop
 
-## 🕹️ Roadmap Web
+🚀 Próximas Características
+Según el documento de requerimientos:
 
-- [ ] Landing Page con Hero, misión, visión y productos destacados.
-- [ ] Sección de categorías y catálogo con filtros.
-- [ ] Carrito de compras dinámico con JS.
-- [ ] Formulario de registro/login con validaciones.
-- [ ] Perfil de usuario editable.
-- [ ] Sistema de reseñas y calificaciones.
-- [ ] Blog + sección de comunidad.
-- [ ] Mapa interactivo con eventos gamer.
-- [ ] Integración de soporte vía WhatsApp.
-- [ ] Integración de botones para redes sociales.
+Mapa de ubicaciones de eventos gamers
 
----
+Chat de soporte técnico integrado con WhatsApp
 
-## 📣 Comunidad Gamer
+Sistema de blogs y noticias del mundo gamer
 
-Conviértete en el héroe de tu propia historia y únete a **Level-Up Gamer**.  
-**¡Explora, juega y gana con nosotros!** ⚡
+Sección de impacto comunitario
