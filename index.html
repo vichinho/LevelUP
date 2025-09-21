@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LEVEL UP</title>
     <link rel="stylesheet" href="static/styles.css" />
-    <link rel="icon" href="img/icon.png" type="image"/>
+    <link rel="icon" href="img/icon.png" type="image" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
   </head>
-  <body>
-    <!-- Header -->
-    <div class="header-container">
-      <!-- Parte superior -->
-      <div class="barra-principal">
-  <a href="#" id="mi-cuenta"><i class="fas fa-user"></i> Mi cuenta</a>
-  <a href="login.html" id="iniciar-sesion">Iniciar sesión</a>
-  <a href="#"><i class="fas fa-shopping-cart"></i> Usted tiene <strong>0</strong> productos en el carrito</a>
-</div>
 
-      <!-- Parte inferior con nombre + buscador -->
+  <body>
+    <!-- ==============================
+         HEADER 
+    ============================== -->
+    <div class="header-container">
+      <!-- Barra principal -->
+      <div class="barra-principal">
+        <a href="#" id="mi-cuenta"><i class="fas fa-user"></i> Mi cuenta</a>
+        <a href="login.html" id="iniciar-sesion">Iniciar sesión</a>
+        <a href="#"
+          ><i class="fas fa-shopping-cart"></i> Usted tiene
+          <strong>0</strong> productos en el carrito</a
+        >
+      </div>
+
+      <!-- Nombre y buscador -->
       <div class="nombre-buscador">
         <a href="index.html" class="logo-link">
           <div class="nombre">LEVELUP 升級</div>
@@ -31,7 +37,10 @@
         </div>
       </div>
     </div>
-    <!-- Navegación -->
+
+    <!-- ==============================
+         NAVEGACIÓN 
+    ============================== -->
     <nav>
       <ul>
         <li>
@@ -57,19 +66,26 @@
       </ul>
     </nav>
 
-    <!-- Animaciones -->
+    <!-- ==============================
+         ANIMACIONES DE FONDO 
+    ============================== -->
     <div id="star-background"></div>
     <div id="paw-animation"></div>
 
+    <!-- ==============================
+         TEXTO EN MOVIMIENTO 
+    ============================== -->
     <div class="texto-movimiento">
       <span>
         Descuento de por vida del 20% para usuarios registrados con correos de
         <strong style="color: #f2a516">Duoc</strong
-        ><strong style="color: #013664">UC</strong></span
-      >
+        ><strong style="color: #013664">UC</strong>
+      </span>
     </div>
 
-    <!-- Carrusel -->
+    <!-- ==============================
+         CARRUSEL 
+    ============================== -->
     <header>
       <div class="carrusel">
         <div class="slides">
@@ -79,7 +95,10 @@
         </div>
       </div>
     </header>
-    <!-- Información -->
+
+    <!-- ==============================
+         INFORMACIÓN (MISIÓN, VISIÓN, NOSOTROS) 
+    ============================== -->
     <section id="informacion" class="informacion-mision-vision">
       <div class="mision">
         <h4>Misión 👾</h4>
@@ -90,7 +109,9 @@
           comunidad gamer.
         </p>
       </div>
+
       <div class="divider"></div>
+
       <div class="vision">
         <h4>Visión 🎮</h4>
         <p>
@@ -100,7 +121,9 @@
           nuestros clientes más fieles.
         </p>
       </div>
+
       <div class="divider"></div>
+
       <div class="nosotros">
         <h4>Nosotros 🪀</h4>
         <p>
@@ -112,10 +135,14 @@
       </div>
     </section>
 
+    <!-- ==============================
+         SECCIÓN DE PRODUCTOS 
+    ============================== -->
     <section class="product-section">
       <h2>Nuestros Productos</h2>
+
       <div class="product-grid">
-        <!-- Juegos de Mesa -->
+        <!-- JUEGOS DE MESA -->
         <div class="product-card juegos-mesa">
           <img src="img/catan.jpg" alt="Juego de Mesa Catan" />
           <div class="product-info">
@@ -134,7 +161,7 @@
           </div>
         </div>
 
-        <!-- Accesorios -->
+        <!-- ACCESORIOS -->
         <div class="product-card accesorios">
           <img src="img/controlx.webp" alt="Controlador Xbox Series X" />
           <div class="product-info">
@@ -153,7 +180,7 @@
           </div>
         </div>
 
-        <!-- Consolas -->
+        <!-- CONSOLAS -->
         <div class="product-card consolas">
           <img src="img/ps5.webp" alt="PlayStation 5" />
           <div class="product-info">
@@ -163,7 +190,7 @@
           </div>
         </div>
 
-        <!-- Computadores -->
+        <!-- COMPUTADORES -->
         <div class="product-card computadores">
           <img src="img/rog.webp" alt="PC Gamer ASUS ROG Strix" />
           <div class="product-info">
@@ -173,7 +200,7 @@
           </div>
         </div>
 
-        <!-- Sillas Gamers -->
+        <!-- SILLAS GAMERS -->
         <div class="product-card sillas">
           <img src="img/silla.jpg" alt="Silla Gamer Secretlab Titan" />
           <div class="product-info">
@@ -183,7 +210,7 @@
           </div>
         </div>
 
-        <!-- Mouse -->
+        <!-- MOUSE -->
         <div class="product-card mouse">
           <img src="img/mouse.webp" alt="Mouse Gamer Logitech G502 HERO" />
           <div class="product-info">
@@ -193,7 +220,7 @@
           </div>
         </div>
 
-        <!-- Mousepad -->
+        <!-- MOUSEPAD -->
         <div class="product-card mousepad">
           <img src="img/mousepad.webp" alt="Mousepad Razer Goliathus" />
           <div class="product-info">
@@ -203,7 +230,7 @@
           </div>
         </div>
 
-        <!-- Poleras -->
+        <!-- POLERAS -->
         <div class="product-card poleras">
           <img src="img/polera.webp" alt="Polera Gamer 'Level-Up'" />
           <div class="product-info">
@@ -214,9 +241,13 @@
         </div>
       </div>
     </section>
-    <!-- Footer -->
+
+    <!-- ==============================
+         FOOTER 
+    ============================== -->
     <footer>
       <div class="footer-container">
+        <!-- Información de la empresa -->
         <div class="footer-section">
           <h3>LEVEL UP 升級</h3>
           <p>
@@ -233,6 +264,7 @@
           </div>
         </div>
 
+        <!-- Soporte -->
         <div class="footer-section">
           <h4>Soporte</h4>
           <ul>
@@ -245,6 +277,7 @@
           </ul>
         </div>
 
+        <!-- Contacto -->
         <div class="footer-section">
           <h4>Contacto</h4>
           <div class="contact-info">
@@ -252,18 +285,10 @@
             <p><i class="fas fa-phone"></i> +56 9 7654 3210</p>
             <p><i class="fas fa-map-marker-alt"></i> Despachos a todo Chile</p>
           </div>
-
-          <div class="newsletter">
-            <h4>Suscripciones</h4>
-            <p>Suscríbete para recibir ofertas exclusivas</p>
-            <div class="newsletter-form">
-              <input type="email" placeholder="Tu correo electrónico" />
-              <button><i class="fas fa-paper-plane"></i></button>
-            </div>
-          </div>
         </div>
       </div>
 
+      <!-- Footer inferior -->
       <div class="footer-bottom">
         <p>
           &copy; 2025 LEVELUP Gamer. Todos los derechos reservados. |
@@ -273,11 +298,10 @@
       </div>
     </footer>
 
-    <!-- Tu script principal para otras funcionalidades -->
-<script src="static/script.js"></script>
-
-<!-- Script para manejar el login y modificar la barra -->
-<script src="static/login-status.js"></script>
-
+    <!-- ==============================
+         SCRIPTS 
+    ============================== -->
+    <script src="static/script.js"></script>
+    <script src="static/login-status.js"></script>
   </body>
 </html>

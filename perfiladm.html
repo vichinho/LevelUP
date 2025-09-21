@@ -1,49 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ADM - Dashboard</title>
-  <link rel="stylesheet" href="static/stylesdash.css">
-  <link rel="icon" href="img/icon.png" type="image"/>
-
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADM - Dashboard</title>
+    <link rel="stylesheet" href="static/stylesdash.css" />
+    <link rel="icon" href="img/icon.png" type="image" />
+  </head>
+  <body>
     <div class="sidebar">
-        <h2>Panel Administrador</h2>
-        <a href="perfiladm.html">Dashboard</a>
-        <a href="usuarios.html">Usuarios</a>
-        <a href="#">Reportes</a>
-        <a href="#">Cerrar sesión</a>
-      </div>
-
-  <!-- Main Content -->
-  <div class="main-content">
-    <div class="content">
-      <h2>Listado de Productos</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Imagen</th>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Categoría</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody id="product-table-body">
-          <!-- Productos se insertan dinámicamente -->
-        </tbody>
-      </table>
+      <h2>Panel Administrador</h2>
+      <a href="index.html">Inicio</a>
+      <a href="perfiladm.html">Dashboard</a>
+      <a href="usuarios.html">Usuarios</a>
+      <a href="#">Reportes</a>
+      <a href="#">Cerrar sesión</a>
     </div>
-  </div>
 
-  <!-- Cargar productos desde archivo externo -->
-  <script src="static/products.js"></script>
-  <script>
-    
-  </script>
-</body>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="content">
+        <h2>Listado de Productos</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Imagen</th>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Categoría</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="product-table-body">
+            <!-- Productos se insertan dinámicamente -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Cargar productos desde archivo externo -->
+    <script src="static/products.js"></script>
+    <script></script>
+  </body>
 </html>
